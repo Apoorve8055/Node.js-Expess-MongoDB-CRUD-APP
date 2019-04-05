@@ -11,7 +11,10 @@ var employeeSchema = new mongoose.Schema({
     },
     Mobile: {
         type: String
+    },
+    pass:{
+        type:String
     }
 });
 
-mongoose.model("Emp",employeeSchema);
+mongoose.model("reg",employeeSchema);

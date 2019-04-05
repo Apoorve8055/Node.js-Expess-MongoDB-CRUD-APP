@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%=title%></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div align="center" style="padding:200px;,100px; ">
+        <h2>Registration Employee</h2>
+        <form action="/emp" class="was-validated" align="left" method="post" >
+
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="uname" >First Name:</label>
+                    <input type="text" class="form-control" name="uname" placeholder="Enter First Name"  required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="uname" >Last Name:</label>
+                    <input type="text" class="form-control" name="lname" placeholder="Enter Last Name" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="uname" >Email:</label>
+                    <input type="email" class="form-control" name="email" placeholder="Enter Email " required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="uname" >Phone:</label>
+                    <input type="text" class="form-control" name="phone" placeholder="Enter Phone"  required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control"  placeholder="Enter password" name="pswd" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
