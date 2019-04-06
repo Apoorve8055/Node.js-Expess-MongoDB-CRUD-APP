@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ title }}</title>
+    <title><%= title %>  </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <div class="container">
     <div align="center" style="padding:200px;,100px; ">
-    <h2>Bordered Table</h2>
-    <p>The .table-bordered class adds borders to a table:</p>
+    <h2>View Employee</h2>
     <table class="table table-bordered">
         <thead>
         <tr>
             <th>Firstname</th>
             <th>Lastname</th>
             <th>Email</th>
+            <th>Phone</th>
+            <th align="center" >Action</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-        </tr>
-        <tr>
-            <td>Mary</td>
-            <td>Moe</td>
-            <td>mary@example.com</td>
-        </tr>
-        <tr>
-            <td>July</td>
-            <td>Dooley</td>
-            <td>july@example.com</td>
-        </tr>
+
+    <% docs.forEach(function(thing){ %>
+    <tr>
+        <td><%=thing.Fname %></td>
+        <td><%=thing.lname %></td>
+        <td><%=thing.Email %></td>
+        <td><%=thing.Mobile %></td>
+        <td > <a href="/Delete/<%=thing._id %>"><i class="fas fa-pencil-alt"></i></a> &nbsp; <a href=""<%=thing._id %>"><i class="fas fa-trash"></i></a></td>
+    </tr>
+    <% }) %>
+
         </tbody>
     </table>
 </div>

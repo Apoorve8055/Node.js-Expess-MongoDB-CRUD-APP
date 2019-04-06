@@ -4,4 +4,5 @@ mongoose.connect('mongodb://127.0.0.1:27017/EmployeeDB', {useNewUrlParser: true}
     else console.log("Db Connected Successfully!");
 });
 
+
 require('./AppSchema');
