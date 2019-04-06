@@ -43,3 +43,12 @@ exports.delete = function(req,res){
         else res.redirect('/view');
     });
 }
+
+
+exports.update = function(req,res){
+    Emp.findOneAndUpdate({_id : req.params.id},req.body,{ new : true},function(err,doc){
+            if(err) throw err
+            else res.redirect('/view');
+        }
+    );
+}
