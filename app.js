@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 app.use('/',root);
 app.use('/emp',root);
 app.use('/view',root);
+app.use('/delete/:id',root);
 
 app.listen(8080,function(){
     console.log("Http://127.0.0.1:8080");

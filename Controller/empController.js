@@ -28,7 +28,7 @@ exports.reg = function(req, res) {
     });
 }
 
-exports.viewdata = function(req,res) {
+exports.viewdata = function viewNow(req,res) {
     Emp.find(function(err,result){
         res.render('view',{
             docs : result,
@@ -37,3 +37,9 @@ exports.viewdata = function(req,res) {
     });
 }
 
+exports.delete = function(req,res){
+    Emp.findByIdAndRemove(req.params.id,(err)=>{
+    if(err) throw err
+        else res.redirect('/view');
+    });
+}
