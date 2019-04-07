@@ -52,3 +52,14 @@ exports.update = function(req,res){
         }
     );
 }
+
+exports.search = function(req,res){
+
+    Emp.find({ $text: { $search:  req.body.searchF } },function(err,result){
+        res.render('view',{
+            docs : result,
+            title: "Node.js Expess MongoDB CRUD APP"
+        });
+    });
+
+}
